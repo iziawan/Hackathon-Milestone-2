@@ -1,0 +1,98 @@
+/* General reset to remove default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.resume-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Heading */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 5px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+    opacity: 0.8; /* Added hover effect */
+}
+
+/* Hidden Content */
+#personal-info-content,
+#education-content,
+#skills-content,
+#work-experience-content {
+    display: none;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+/* Skills List */
+#skills-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#skills-content ul li {
+    background-color: #eaeaea;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Basic Mobile Design */
+@media (max-width: 768px) {
+    .resume-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #personal-info p {
+        font-size: 14px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .toggle-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}

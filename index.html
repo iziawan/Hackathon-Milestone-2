@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Personal Information Section -->
+        <section id="personal-info">
+            <h2>Personal Info</h2>
+            <button class="toggle-btn" data-target="personal-info-content">Toggle Personal Info</button>
+            <div id="personal-info-content">
+                <p><strong>Name:</strong> Fiza Awan</p>
+                <p><strong>Email:</strong> <a href="mailto:awanfiza95@gmail.com">awanfiza95@gmail.com</a></p>
+                <p><strong>Phone:</strong> 03131292926</p>
+                <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <button class="toggle-btn" data-target="education-content">Toggle Education</button>
+            <div id="education-content">
+                <p>Matriculation - A+ Grade</p>
+                <p>Governor Initiative Program - Currently in Quarter 2</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <button class="toggle-btn" data-target="skills-content">Toggle Skills</button>
+            <div id="skills-content">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>TypeScript</li>
+                    <li>Next.js</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <button class="toggle-btn" data-target="work-experience-content">Toggle Work Experience</button>
+            <div id="work-experience-content">
+                <p>Building LinkedIn and Upwork profiles, seeking new opportunities.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
