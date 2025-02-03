@@ -1,98 +1,323 @@
-/* General reset to remove default margins */
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Container Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4; /* Slightly lighter gray for a modern look */
+    color: #333; /* Dark gray text for readability */
+}
+
 .resume-container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff; /* Clean white background for the resume */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+    overflow: hidden;
+    padding: 30px;
 }
 
-/* Section Heading */
-h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 5px;
+.header {
+    background-color: #1a1a2e; /* Dark blue for the header */
+    padding: 25px;
+    color: #ffffff; /* White text color */
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Center align heading and profile */
+    border-bottom: 5px solid #ff8c00; /* Warm orange border */
 }
 
-/* Toggle Button */
-.toggle-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin-top: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
+.header h1 {
+    font-size: 36px; /* Larger font size for main heading */
+    font-weight: 700; /* Bold weight for emphasis */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center align text */
+    color: #ffffff; /* White color to match header */
 }
 
-.toggle-btn:hover {
-    background-color: #0056b3;
-    opacity: 0.8; /* Added hover effect */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Hidden Content */
-#personal-info-content,
-#education-content,
-#skills-content,
-#work-experience-content {
-    display: none;
-}
-
-/* Profile Picture */
-.profile-picture {
-    width: 150px;
-    height: 150px;
+#profile-picture {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff; /* White border */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.personal-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.contact a {
+    color: #ff8c00; /* Warm orange color for links */
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: #ff8c00; /* Warm orange for tabs */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s;
     margin-top: 15px;
 }
 
-/* Skills List */
-#skills-content ul {
-    list-style-type: none;
+.tabs button:hover {
+    background-color: #e07b39; /* Slightly darker orange for hover effect */
+}
+
+.content {
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #ffffff; /* Dark blue color for section headers */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #ff8c00; /* Warm orange underline */
+    padding-bottom: 10px;
+}
+
+/* Add emojis to section headers */
+h2::before {
+    content: "🔹 "; /* Blue diamond emoji for section headers */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a2e; /* Dark blue for card titles */
+}
+
+.card-subtitle {
+    font-size: 20px;
+    color: #666; /* Medium gray color for subtitles */
+    margin-top: 5px;
+}
+
+.card-details {
+    font-size: 16px;
+    color: #333; /* Dark gray for details */
+    margin-top: 10px;
+}
+
+/* Skill List */
+.skill-list {
+    list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-#skills-content ul li {
-    background-color: #eaeaea;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+.skill-list li {
+    background-color: #1a1a2e; /* Dark blue background for skills */
+    color: #ffffff; /* White text color */
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-/* Basic Mobile Design */
+/* Add emojis to skill list items */
+.skill-list li::before {
+    content: "💡 "; /* Light bulb emoji for skills */
+}
+
+.skill-list li:hover {
+    background-color: #ff8c00; /* Warm orange for hover effect */
+    color: #ffffff; /* Keep text white on hover */
+    transform: translateY(-5px); /* Slightly lift the item */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.skill-list li:active {
+    transform: translateY(0); /* Reset lift effect on click */
+}
+
+.content-section {
+    display: none; /* Hide all sections by default */
+}
+
+.content-section.active {
+    display: block; /* Show only the active section */
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
-    .resume-container {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 15px;
-        width: 90%;
     }
 
-    h2 {
-        font-size: 22px;
+    .profile {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #personal-info p {
-        font-size: 14px;
-    }
-
-    .profile-picture {
+    #profile-picture {
         width: 120px;
         height: 120px;
     }
 
-    .toggle-btn {
-        width: 100%;
-        padding: 12px;
+    .personal-info h1 {
+        font-size: 28px;
+    }
+
+    .contact {
+        font-size: 16px;
+    }
+
+    .tabs button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .section {
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .card-subtitle {
+        font-size: 18px;
+    }
+
+    .card-details {
+        font-size: 14px;
+    }
+
+    .skill-list li {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .profile {
+        gap: 10px;
+    }
+
+    #profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .personal-info h1 {
+        font-size: 24px;
+    }
+
+    .contact {
+        font-size: 14px;
+    }
+
+    .tabs button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-subtitle {
+        font-size: 16px;
+    }
+
+    .card-details {
+        font-size: 12px;
+    }
+
+    .skill-list li {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }

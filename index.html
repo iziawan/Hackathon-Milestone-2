@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Interactive Resume</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Resume</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="resume-container">
-        <!-- Personal Information Section -->
-        <section id="personal-info">
-            <h2>Personal Info</h2>
-            <button class="toggle-btn" data-target="personal-info-content">Toggle Personal Info</button>
-            <div id="personal-info-content">
-                <p><strong>Name:</strong> Fiza Awan</p>
-                <p><strong>Email:</strong> <a href="mailto:awanfiza95@gmail.com">awanfiza95@gmail.com</a></p>
-                <p><strong>Phone:</strong> 03131292926</p>
-                <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
-            </div>
-        </section>
+      <header class="header">
+        <h1>Static Resume</h1> <!-- Added main heading here -->
+        <div class="profile">
+          <img src="mypic.jpg" alt="Profile Picture" id="profile-picture" />
+          <div class="personal-info">
+            <h2 id="name">Fiza Awan</h2>
+            <p class="contact">
+              Email: <a href="mailto:ubaaid74@gmail.com">awanfiza95@gmail.com</a>
+            </p>
+            <p class="contact">
+              Phone: <a href="tel:+923172077696">+92 3704826185</a>
+            </p>
+          </div>
+        </div>
+      </header>
 
+      <div class="tabs">
+        <button id="education-tab">Education</button>
+        <button id="skills-tab">Skills</button>
+        <button id="experience-tab">Experience</button>
+      </div>
+
+      <main class="content">
         <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <button class="toggle-btn" data-target="education-content">Toggle Education</button>
-            <div id="education-content">
-                <p>Matriculation - A+ Grade</p>
-                <p>Governor Initiative Program - Currently in Quarter 2</p>
-            </div>
+        <section id="education-content" class="content-section">
+          <h2>Education</h2>
+          <div class="card-grid"></div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <button class="toggle-btn" data-target="skills-content">Toggle Skills</button>
-            <div id="skills-content">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>TypeScript</li>
-                    <li>Next.js</li>
-                </ul>
-            </div>
+        <section id="skills-content" class="content-section">
+          <h2>Skills</h2>
+          <ul class="skill-list"></ul>
         </section>
 
         <!-- Work Experience Section -->
-        <section id="work-experience">
-            <h2>Work Experience</h2>
-            <button class="toggle-btn" data-target="work-experience-content">Toggle Work Experience</button>
-            <div id="work-experience-content">
-                <p>Building LinkedIn and Upwork profiles, seeking new opportunities.</p>
-            </div>
+        <section id="work-experience-content" class="content-section">
+          <h2>Work Experience</h2>
+          <div class="card-grid"></div>
         </section>
+      </main>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
